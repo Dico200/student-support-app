@@ -1,0 +1,17 @@
+<div class="vbox">
+  <span class="header">
+    The below button will take you to an external site.
+    <br/>
+  </span>
+
+  <span class="login-notice" *ngIf="params.hasLogin">
+    You will have to login with your student account.
+    <br/>
+  </span>
+
+  <span class="extra-text" *ngIf="params.extraText">
+    {{params.extraText}}
+  </span>
+
+  <app-redirect-button [url]="params.url" [text]="params.text"></app-redirect-button>
+</div>

@@ -1,0 +1,27 @@
+@import '../styles/theme';
+
+/* Use the following style classes to define a 16:9 mobile form factor */
+.container {
+  width: 504px;
+  height: 896px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: map-get(map-get($theme, background), background);
+}
+
+.outer-container {
+  padding-top: 10px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #DDDDDD;
+}
+
+/*
+mat-divider {
+  margin-top: 20px;
+}*/
+
+router-outlet {
+  margin-left: 5px;
+  margin-right: 5px;
+}

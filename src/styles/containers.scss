@@ -1,0 +1,26 @@
+.vbox {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+
+.vmargin {
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.hbox {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+
+.hmargin {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
