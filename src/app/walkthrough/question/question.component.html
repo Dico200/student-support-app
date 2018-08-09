@@ -1,3 +1,15 @@
-<span class="question">
-  {{question}}
-</span>
+<div class="vbox" style="justify-content: space-between">
+  <span class="question" style="flex-grow: 9;">
+    <ng-content></ng-content>
+  </span>
+
+  <div>
+    <mat-card class="btn-yes" style="margin-bottom: 12px;">
+      <button mat-button (click)="onClickYes()">Yes</button>
+    </mat-card>
+    <mat-card class="btn-no">
+      <button mat-button (click)="onClickNo()">No</button>
+    </mat-card>
+  </div>
+</div>
+

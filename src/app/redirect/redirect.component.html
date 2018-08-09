@@ -1,17 +1,26 @@
-<div class="vbox">
+<div class="vbox" style="justify-content: space-evenly">
   <span class="header">
     The below button will take you to an external site.
     <br/>
-  </span>
-
-  <span class="login-notice" *ngIf="params.hasLogin">
-    You will have to login with your student account.
     <br/>
   </span>
 
-  <span class="extra-text" *ngIf="params.extraText">
-    {{params.extraText}}
-  </span>
+  <div *ngIf="hasLogin || extraText" class="header">
+    Good to know:
+    <br/>
+    <mat-list>
+      <mat-list-item *ngIf="hasLogin">
+        <span class="extra-text">
+          You will have to login with your student account.
+        </span>
+      </mat-list-item>
+      <mat-list-item *ngIf="extraText">
+        <span class="extra-text">
+          {{extraText}}
+        </span>
+      </mat-list-item>
+    </mat-list>
+  </div>
 
-  <app-redirect-button [url]="params.url" [text]="params.text"></app-redirect-button>
+  <app-redirect-button [url]="url" [text]="text"></app-redirect-button>
 </div>

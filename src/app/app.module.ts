@@ -3,32 +3,37 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 
-import {RouterModule, Routes} from '@angular/router';
+import {RouterModule} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatIconRegistry} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 
-import {RedirectComponent} from './redirect/redirect.component';
-import {RedirectButtonComponent} from './redirect/redirect-button/redirect-button.component';
-import {DisabilityComponent} from './disability/disability.component';
-import {ToolbarComponent} from './toolbar/toolbar.component';
+import {appRoutes} from './routes';
 import {MaterialModule} from './material';
+import {HistoryService} from './history/history.service';
+import {RedirectParamsService} from './redirect/service/redirect.service';
+
 import {HubComponent} from './hub/hub.component';
 import {HubCardComponent} from './hub/hub-card/hub-card.component';
-import {RedirectParamsService} from './redirect/service/redirect.service';
-import {HistoryService} from './history/history.service';
-import {QuestionComponent} from './walkthrough/question/question.component';
-import {QuestionService} from './walkthrough/question/question.service';
+import {ToolbarComponent} from './toolbar/toolbar.component';
+import {RedirectComponent} from './redirect/redirect.component';
+import {RedirectButtonComponent} from './redirect/redirect-button/redirect-button.component';
+import {EnquiryComponent} from './enquiry/enquiry.component';
 
-const appRoutes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'hub'},
-  {path: 'index', redirectTo: 'hub'},
-  {path: 'hub', component: HubComponent},
-  {path: 'redirect', component: RedirectComponent},
-  {path: 'disability', component: DisabilityComponent},
-  {path: 'question/:name', component: QuestionComponent}
-];
+import {QuestionComponent} from './walkthrough/question/question.component';
+import {QuestionAdviceComponent} from './walkthrough/question-advice/question-advice.component';
+
+import {InitialCardComponent} from './walkthrough/initial-card/initial-card.component';
+import {DisabilityPage1Component} from './walkthrough/disability/disability-page1/disability-page1.component';
+import {DisabilityPage2Component} from './walkthrough/disability/disability-page2/disability-page2.component';
+import {DisabilityPage3Component} from './walkthrough/disability/disability-page3/disability-page3.component';
+import {DisabilityPage4Component} from './walkthrough/disability/disability-page4/disability-page4.component';
+import {HealthQuestionComponent} from './walkthrough/health/health-question/health-question.component';
+import {HealthPage1Component} from './walkthrough/health/health-page1/health-page1.component';
+import {HealthPage2Component} from './walkthrough/health/health-page2/health-page2.component';
+import {HealthPage3Component} from './walkthrough/health/health-page3/health-page3.component';
+import {HealthPage4Component} from './walkthrough/health/health-page4/health-page4.component';
 
 @NgModule({
   declarations: [
@@ -36,10 +41,22 @@ const appRoutes: Routes = [
     ToolbarComponent,
     RedirectComponent,
     RedirectButtonComponent,
-    DisabilityComponent,
     HubComponent,
     HubCardComponent,
-    QuestionComponent
+    QuestionComponent,
+    QuestionAdviceComponent,
+    EnquiryComponent,
+
+    InitialCardComponent,
+    DisabilityPage1Component,
+    DisabilityPage2Component,
+    DisabilityPage3Component,
+    DisabilityPage4Component,
+    HealthQuestionComponent,
+    HealthPage1Component,
+    HealthPage2Component,
+    HealthPage3Component,
+    HealthPage4Component
   ],
   imports: [
     BrowserModule,
@@ -50,8 +67,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     RedirectParamsService,
-    HistoryService,
-    QuestionService
+    HistoryService
   ],
   bootstrap: [AppComponent]
 })

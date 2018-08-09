@@ -1,0 +1,10 @@
+@import '../../../styles/buttons';
+@import '../../../styles/theme';
+
+mat-card {
+  background-color: map-get($primary, darker)
+}
+
+button {
+  font-size: 25px;
+}

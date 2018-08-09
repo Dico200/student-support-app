@@ -1,18 +1,21 @@
 <mat-toolbar role="heading">
 
+  <div></div>
   <span class="title-text">Student Support</span>
 
-  <button mat-button *ngIf="hasBackButton" class="back-button" (click)="onClick()">
-    <mat-icon svgIcon="arrow-left"></mat-icon>
-  </button>
+  <div>
+    <button mat-button *ngIf="hasBackButton" class="back-button" (click)="onClick()">
+      <mat-icon svgIcon="arrow-left"></mat-icon>
+    </button>
+  </div>
 
   <!--<div class="profile-button-container-1">
     <div class="profile-button-container-2">
       <div class="profile-button-container-3">-->
-        <!--<button class="profile-button" mat-button routerLink="/profile" routerLinkActive="active">
-          <mat-icon>account_circle</mat-icon>
-        </button>
-      <!--</div>
-    </div>
-  </div>-->
+  <!--<button class="profile-button" mat-button routerLink="/profile" routerLinkActive="active">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+<!--</div>
+</div>
+</div>-->
 </mat-toolbar>

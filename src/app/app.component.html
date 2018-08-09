@@ -1,6 +1,15 @@
 <div class="outer-container">
   <div class="container">
+    <!--<div class="vbox" style="justify-content: flex-start;">
+      <app-toolbar></app-toolbar>
+      <div class="hmargin" style="flex: 10 10 auto; height: 0;">
+        <router-outlet></router-outlet>
+      </div>
+    </div>-->
+
     <app-toolbar></app-toolbar>
-    <router-outlet></router-outlet>
+    <div class="hmargin vmargin" style="height: 90%;">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

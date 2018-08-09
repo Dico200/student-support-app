@@ -1,14 +1,16 @@
 @import '../../styles/containers';
 
 .header {
-  font-family: Pristina, serif;
-}
-
-.login-notice {
-  font-family: Centaur, serif;
+  font: italic 30px Georgia, serif;
+  text-align: center;
 }
 
 .extra-text {
-  font-family: Monospaced, serif;
+  font: 20px Georgia, serif;
+  text-align: center;
 }
 
+mat-list-item {
+  font: 20px Georgia, serif;
+  text-align: center;
+}

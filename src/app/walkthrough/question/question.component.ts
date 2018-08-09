@@ -1,28 +1,27 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {Subscription} from 'rxjs';
-import {QuestionService} from './question.service';
+import {Component, Input} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss']
 })
-export class QuestionComponent implements OnInit, OnDestroy {
-  private sub: Subscription; // The registered listener with the route
-  question: string;
+export class QuestionComponent {
+  @Input()
+  routeYes: string;
 
-  constructor(private route: ActivatedRoute,
-              private service: QuestionService) { }
+  @Input()
+  routeNo: string;
 
-  ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
-        this.question = this.service.getQuestion(params['name']);
-    });
+  constructor(private router: Router) {
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
+  onClickYes() {
+    this.router.navigateByUrl(this.routeYes);
+  }
+
+  onClickNo() {
+    this.router.navigateByUrl(this.routeNo);
   }
 
 }

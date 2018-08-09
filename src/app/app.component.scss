@@ -1,4 +1,5 @@
 @import '../styles/theme';
+@import '../styles/containers';
 
 /* Use the following style classes to define a 16:9 mobile form factor */
 .container {
@@ -20,8 +21,7 @@
 mat-divider {
   margin-top: 20px;
 }*/
-
-router-outlet {
-  margin-left: 5px;
-  margin-right: 5px;
-}
+/*
+:host /deep/ router-outlet + {
+  height:70%;
+}*/

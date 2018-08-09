@@ -41,6 +41,9 @@ $theme: (
   )
 );
 
+/*
+This mixin can be @include ed by styles.scss
+ */
 @mixin mobile-web-app-theme {
   @include mat-core();
   @include angular-material-theme($theme);

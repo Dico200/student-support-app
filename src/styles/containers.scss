@@ -1,9 +1,9 @@
 .vbox {
   display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  align-items: center;
+  flex-flow: column nowrap;
   justify-content: center;
+  align-items: stretch;
+  height: 100%;
 }
 
 .vmargin {
@@ -13,14 +13,14 @@
 
 .hbox {
   display: flex;
-  flex-direction: row;
-  align-content: flex-start;
-  align-items: center;
+  flex-flow: row nowrap;
   justify-content: center;
+  align-items: stretch;
+  width: 100%;
 }
 
 .hmargin {
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 

@@ -7,7 +7,7 @@ import {RedirectParamsService} from './service/redirect.service';
   templateUrl: './redirect.component.html',
   styleUrls: ['./redirect.component.scss']
 })
-export class RedirectComponent implements OnInit {
+export class RedirectComponent {
 
   // Contents of the button
   @Input()
@@ -36,25 +36,27 @@ export class RedirectComponent implements OnInit {
    */
 
   get text(): string {
-    return this._text || this.params.text;
+    return RedirectComponent.pickAnyDefinedValue(this._text, this.params.text);
   }
 
   get url(): string {
-    return this._url || this.params.url;
+    return RedirectComponent.pickAnyDefinedValue(this._url, this.params.url);
   }
 
   get hasLogin(): boolean {
-    return this._hasLogin || this.params.hasLogin;
+    return RedirectComponent.pickAnyDefinedValue(this._hasLogin, this.params.hasLogin);
   }
 
   get extraText(): string {
-    return this._extraText || this.params.extraText;
+    return RedirectComponent.pickAnyDefinedValue(this._extraText, this.params.extraText);
   }
 
   constructor(public params: RedirectParamsService) {
   }
 
-  ngOnInit() {
+  private static pickAnyDefinedValue(value1, value2) {
+    if (value1 === undefined) return value2;
+    return value1;
   }
 
 }
