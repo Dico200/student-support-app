@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {Component, Input} from '@angular/core';
 import {RedirectParamsService} from './service/redirect.service';
 
 @Component({
@@ -51,7 +50,7 @@ export class RedirectComponent {
     return RedirectComponent.pickAnyDefinedValue(this._extraText, this.params.extraText);
   }
 
-  constructor(public params: RedirectParamsService) {
+  constructor(private params: RedirectParamsService) {
   }
 
   private static pickAnyDefinedValue(value1, value2) {

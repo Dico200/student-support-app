@@ -2,6 +2,9 @@ import {Component, Input} from '@angular/core';
 import {Router} from '@angular/router';
 import {WalkthroughStackService} from '../../walkthrough/walkthrough-stack.service';
 
+/**
+ * This component represents an individual button on the hub.
+ */
 @Component({
   selector: 'app-hub-card',
   templateUrl: './hub-card.component.html',

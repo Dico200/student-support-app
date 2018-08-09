@@ -1,5 +1,9 @@
 <div class="vbox" style="justify-content: space-evenly;">
-  <app-hub-card [route]="'/health'" [nextRoute]="'/disability'">Walkthrough</app-hub-card>
+  <!--The walkthrough is a rundown of both health and disability.
+   It starts with the health rundown, and the [nextRoute] directive tells
+   the WalkthroughStackService that disability rundown is next.-->
+  <app-hub-card [route]="'/walkthrough'" [nextRoute]="'/disability'">Walkthrough</app-hub-card>
+
   <app-hub-card [route]="'/health'">Health Services Rundown</app-hub-card>
   <app-hub-card [route]="'/disability'">Disability Services Rundown</app-hub-card>
   <app-hub-card [route]="'/enquiry'">Submit General Enquiry</app-hub-card>

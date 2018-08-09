@@ -1,5 +1,13 @@
 @import '../../node_modules/@angular/material/theming';
 
+/*
+Below, we define our theme for material design elements.
+Very precise control can be had of the colors used by components,
+but the main choices are the primary and accent color.
+They are declared as a variable such that they are accessible easily
+when importing this file to other stylesheets.
+ */
+
 $primary: mat-palette($mat-teal, 100, 50, 300);
 $accent: mat-palette($mat-green, 200, 50, 300);
 $theme: (

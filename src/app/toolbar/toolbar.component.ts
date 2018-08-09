@@ -1,8 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {Router, RouterState} from '@angular/router';
+import {Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {HistoryService} from '../history/history.service';
 
+/**
+ * This component is seen everywhere in the app. It contains the name of the app
+ * and a button to go back in history.
+ */
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
@@ -10,8 +14,10 @@ import {HistoryService} from '../history/history.service';
 })
 export class ToolbarComponent implements OnInit {
 
+  /**
+   * Currently, the back button is never hidden.
+   */
   get hasBackButton(): boolean {
-    let url = this.router.url;
     return true;
   }
 

@@ -1,5 +1,8 @@
 import {Injectable} from '@angular/core';
 
+/**
+ * This service is used to communicate between the redirect buttons and the redirect component.
+ */
 @Injectable()
 export class RedirectParamsService {
   text: string;

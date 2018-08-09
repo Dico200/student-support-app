@@ -2,6 +2,11 @@ import {Component, Input} from '@angular/core';
 import {Router} from '@angular/router';
 import {WalkthroughStackService} from '../walkthrough-stack.service';
 
+/**
+ * This component can be used on a page to embed textual content
+ * in an area with a Yes and a No button underneath, with consistent styling.
+ */
+
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',

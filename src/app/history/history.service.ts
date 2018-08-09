@@ -4,21 +4,33 @@ import {filter} from 'rxjs/operators';
 
 /*
 This little service is from https://blog.hackages.io/our-solution-to-get-a-previous-route-with-angular-5-601c16621cf0
-It stores the history
+It stores the history of the router, even if it is used in a way that skips changing the window location.
+
+I expanded the capability of this class a considerable amount by myself.
  */
 @Injectable()
 export class HistoryService {
-  private _history: string[] = ["/index"];
+  /*
+  A stack of routes that were visited.
+  Initialized with a route to index, so that pressing back will not create an error
+  right after you load the application.
+   */
+  private _history: string[] = ['/index'];
+  /*
+  Current index in  history stack. The element at this index represents the current route of the application.
+   */
   private _curIdx: number = 0;
+  /*
+  Used to avoid pushing an element onto the stack when using the back button.
+   */
   private _ignoreEvent: boolean = false;
 
-  constructor(
-    private router: Router
-  ) {
+  constructor(private router: Router) {
   }
 
   public loadRouting(): void {
     this.router.events
+    // Filter the events published by the router appropriately.
       .pipe(filter(event => event instanceof NavigationEnd && !this._ignoreEvent))
       .subscribe(({urlAfterRedirects}: NavigationEnd) => {
         if (this._curIdx < this._history.length - 1) {

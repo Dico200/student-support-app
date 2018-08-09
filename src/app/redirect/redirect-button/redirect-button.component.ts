@@ -2,6 +2,15 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {RedirectParamsService} from '../service/redirect.service';
 
+/**
+ * This component displays a redirect button on the page.
+ * The redirect button is used only for external urls,
+ * and has a distinctive colour for this purpose.
+ *
+ * If the external url requires student login, or extra notions are
+ * given through the inputs of this component, it will redirect to a page
+ * where the user is warned about this.
+ */
 @Component({
   selector: 'app-redirect-button',
   templateUrl: './redirect-button.component.html',
