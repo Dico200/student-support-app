@@ -22,18 +22,22 @@ import {RedirectButtonComponent} from './redirect/redirect-button/redirect-butto
 import {EnquiryComponent} from './enquiry/enquiry.component';
 
 import {QuestionComponent} from './walkthrough/question/question.component';
-import {QuestionAdviceComponent} from './walkthrough/question-advice/question-advice.component';
+import {InformationComponent} from './walkthrough/information/information.component';
 
 import {InitialCardComponent} from './walkthrough/initial-card/initial-card.component';
 import {DisabilityPage1Component} from './walkthrough/disability/disability-page1/disability-page1.component';
 import {DisabilityPage2Component} from './walkthrough/disability/disability-page2/disability-page2.component';
 import {DisabilityPage3Component} from './walkthrough/disability/disability-page3/disability-page3.component';
 import {DisabilityPage4Component} from './walkthrough/disability/disability-page4/disability-page4.component';
-import {HealthQuestionComponent} from './walkthrough/health/health-question/health-question.component';
 import {HealthPage1Component} from './walkthrough/health/health-page1/health-page1.component';
-import {HealthPage2Component} from './walkthrough/health/health-page2/health-page2.component';
-import {HealthPage3Component} from './walkthrough/health/health-page3/health-page3.component';
-import {HealthPage4Component} from './walkthrough/health/health-page4/health-page4.component';
+import {SmokerQuestionComponent} from './walkthrough/health/smoker-question/smoker-question.component';
+import {SmokerInformationComponent} from './walkthrough/health/smoker-information/smoker-information.component';
+import {VisionInformationComponent} from './walkthrough/health/vision-information/vision-information.component';
+import {EmergencyInformationComponent} from './walkthrough/health/emergency-information/emergency-information.component';
+import {GpRegistrationInformationComponent} from './walkthrough/health/gp-registration-information/gp-registration-information.component';
+import {WalkthroughStackService} from './walkthrough/walkthrough-stack.service';
+import {HealthLastCardComponent} from './walkthrough/health/health-last-card/health-last-card.component';
+import {DisabilityLastCardComponent} from './walkthrough/disability/disability-last-card/disability-last-card.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,7 @@ import {HealthPage4Component} from './walkthrough/health/health-page4/health-pag
     HubComponent,
     HubCardComponent,
     QuestionComponent,
-    QuestionAdviceComponent,
+    InformationComponent,
     EnquiryComponent,
 
     InitialCardComponent,
@@ -52,11 +56,14 @@ import {HealthPage4Component} from './walkthrough/health/health-page4/health-pag
     DisabilityPage2Component,
     DisabilityPage3Component,
     DisabilityPage4Component,
-    HealthQuestionComponent,
     HealthPage1Component,
-    HealthPage2Component,
-    HealthPage3Component,
-    HealthPage4Component
+    SmokerQuestionComponent,
+    SmokerInformationComponent,
+    VisionInformationComponent,
+    EmergencyInformationComponent,
+    GpRegistrationInformationComponent,
+    HealthLastCardComponent,
+    DisabilityLastCardComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +74,8 @@ import {HealthPage4Component} from './walkthrough/health/health-page4/health-pag
   ],
   providers: [
     RedirectParamsService,
-    HistoryService
+    HistoryService,
+    WalkthroughStackService
   ],
   bootstrap: [AppComponent]
 })
