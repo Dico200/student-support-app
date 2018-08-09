@@ -1,0 +1,25 @@
+<app-question [routeYes]="'/walkthrough/disability/page4'" [routeNo]="">
+  <div style="font-size:25px;">
+    Depending on the disability that you have, you might be eligible for
+    a DSA (Disabled Students Allowance) to help financially.
+    Press the button below for details.
+
+    <br/><br/>
+    <app-redirect-button
+      [url]="'http://www.cardiffmet.ac.uk/study/studentservices/disabilityservice/Pages/Disabled-Students%27-Allowance.aspx'"
+      [text]="'DSA Details'"
+    ></app-redirect-button>
+    <br/>
+
+    Information about the assessment process is available here:
+
+    <br/><br/>
+    <app-redirect-button
+      [url]="'http://www.cardiffmet.ac.uk/study/studentservices/disabilityservice/centre/Pages/Assessment-Process.aspx'"
+      [text]="'DSA Assessment'"
+    ></app-redirect-button>
+    <br/>
+
+    Would you like to book an appointment to get help sorted out for you with your disability?
+  </div>
+</app-question>

@@ -1,0 +1,31 @@
+<app-information [nextRoute]="'/walkthrough/disability/last'">
+  For how to book an assessment for Disability Allowance, see here:
+
+  <br/><br/>
+  <app-redirect-button
+    [url]="'http://www.cardiffmet.ac.uk/study/studentservices/disabilityservice/centre/Pages/Booking-an-Assessment.aspx'"
+    [text]="'DSA Booking Directions'"
+  ></app-redirect-button>
+  <br/>
+
+  If you are dyslexic, you can arrange for a screening appointment here:
+
+  <br/><br/>
+  <app-redirect-button
+    [url]="'https://careerhub.cardiffmet.ac.uk/Form.aspx?id=160558'"
+    [text]="'Dyslexia Screening Request'"
+    [hasLogin]="true"
+    [extraText]="'Keep in mind that you can also email disability@cardiffmet.ac.uk'"
+  ></app-redirect-button>
+  <br/>
+
+  For any other disability, you can book an appointment here:
+
+  <br/><br/>
+  <app-redirect-button
+    [url]="'https://careerhub.cardiffmet.ac.uk/Form.aspx?id=167887'"
+    [text]="'Disability Appointment Form'"
+    [hasLogin]="true"
+    [extraText]="'Keep in mind that you can also email disability@cardiffmet.ac.uk'"
+  ></app-redirect-button>
+</app-information>
